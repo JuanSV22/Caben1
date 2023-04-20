@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         rellenarMatriz(generarMatriz(),datoDesayuno(),datoHabitacion(),datoDias());
     }
     public static int[][] generarMatriz() {
@@ -23,13 +22,11 @@ public class Main {
         return ingresarDias();
     }
     public static int[][] rellenarMatriz(int[][] matriz, int desayuno,int habitacion ,int dias) {
-
-        matriz[habitacion-1][0] = 2;
+        matriz[habitacion-1][0] = 1;
         matriz[habitacion-1][1] = desayuno;
         matriz[habitacion-1][2] = dias;
         return matriz;
     }
-
     private static int ingresarDias() {
         System.out.println("Ingrese la cantidad de días a reservar: ");
         int dias=ingresarSoloNumero();
@@ -87,5 +84,20 @@ public class Main {
         }
         int numero = in.nextInt();
         return numero;
+    }
+
+    public static int Choose(String [] choices) {
+        Scanner SCAN = new Scanner(System.in);
+        if (choices.length==0){throw new RuntimeException("No empty Strings.");}
+        int point = 1;
+        for (String i:choices) {
+            System.out.println(point+". "+i);
+            point++;
+        }
+        int choice;
+        do {
+            choice = SCAN.nextInt() - 1;
+        } while (choice < 0 | choice >= choices.length);
+        return choice;
     }
 }
