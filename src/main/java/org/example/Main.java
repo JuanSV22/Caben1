@@ -4,11 +4,44 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        rellenarMatriz(generarMatriz(),datoDesayuno(),datoHabitacion(),datoDias());
+        int open = 1;
+        int[][] hotel = new int[10][3];
+        while (open == 1) {
+            switch (Choose(new String[]{"Consultar habitaciones.","Reservar Habitacion.","Entregar boleta.","Reiniciar Hotel(Administrador)","Salir."})) {
+                case 0:
+                    consultarHabitaciones(hotel);
+                    break;
+                case 1:
+                    hotel = reservarHabitacion(generarMatriz(),datoDesayuno(),datoHabitacion(),datoDias());
+                    break;
+                case 2:
+                    boleta();
+                    break;
+                case 3:
+                    resetHotel(hotel);
+                    break;
+                case 4:
+                    open = new int[]{0,1}[Choose(new String[]{"No","Si"})];
+                    break;
+                default;
+                    break;
+            }
+        }
     }
     public static int[][] generarMatriz() {
         int[][] matriz = new int[10][3];
         return matriz;
+    }
+
+    public static void consultarHabitaciones(int[][] matriz) {
+        for (int[] habitacion:matriz) {
+            System.out.print(new String[]{"\nVacante ","\nReservado ","\nOcupado "}[habitacion[1]]);
+            if (habitacion[1] != 0) {
+                System.out.print(new String[]{"$30.000 ", "$40.000 "}[habitacion[0]]);
+                System.out.print(habitacion[2] + " Dias.");
+            } else {System.out.print("$0");}
+        }
+        System.out.println("");
     }
     public static int datoDesayuno() {
         int desayuno = ingresarDesayuno();
@@ -21,7 +54,7 @@ public class Main {
     public static int datoDias() {
         return ingresarDias();
     }
-    public static int[][] rellenarMatriz(int[][] matriz, int desayuno,int habitacion ,int dias) {
+    public static int[][] reservarHabitacion(int[][] matriz, int desayuno,int habitacion ,int dias) {
         matriz[habitacion-1][0] = 1;
         matriz[habitacion-1][1] = desayuno;
         matriz[habitacion-1][2] = dias;

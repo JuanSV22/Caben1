@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="805f8496-b26c-4dad-8263-40dfa514052d" name="Changes" comment="Método rellenar matriz con input">
+    <list default="true" id="805f8496-b26c-4dad-8263-40dfa514052d" name="Changes" comment="Unificacion con validacion 2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
@@ -20,6 +20,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681997996872</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Unificacion con validacion.">
+      <created>1682000513951</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682000513951</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Unificacion con validacion 2.">
+      <created>1682000673919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682000673919</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeros métodos" />
     <MESSAGE value="Método rellenar matriz con input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Método rellenar matriz con input" />
+    <MESSAGE value="Unificacion con validacion." />
+    <MESSAGE value="Unificacion con validacion 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Unificacion con validacion 2." />
   </component>
 </project>
