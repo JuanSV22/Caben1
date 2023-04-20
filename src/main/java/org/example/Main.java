@@ -20,8 +20,7 @@ public class Main {
         return habitacion;
     }
     public static int datoDias() {
-        int dias = ingresarDias();
-        return dias;
+        return ingresarDias();
     }
     public static int[][] rellenarMatriz(int[][] matriz, int desayuno,int habitacion ,int dias) {
 
@@ -34,17 +33,11 @@ public class Main {
     private static int ingresarDias() {
         System.out.println("Ingrese la cantidad de días a reservar: ");
         int dias=ingresarSoloNumero();
-        return dias;
-    }
-
-    public static void leerMatriz(int[][] matriz) {
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                    System.out.print(matriz[i][j]);
-                    System.out.print(" ");
-            }
-            System.out.println(" ");
+        while (dias < 1){
+            System.out.println("Valor incorrecto. Volver a ingresar cantidad de dias.");
+            dias = ingresarSoloNumero();
         }
+        return dias;
     }
     public static int ingresarHabitacion() {
         System.out.println("Ingrese el número de la habitación a reservar: ");
