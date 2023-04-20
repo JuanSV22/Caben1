@@ -5,18 +5,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        leerMatriz(rellenarMatriz(generarMatriz()));
+        rellenarMatriz(generarMatriz(),datoDesayuno(),datoHabitacion(),datoDias());
     }
     public static int[][] generarMatriz() {
         int[][] matriz = new int[10][3];
         return matriz;
     }
-    public static int[][] rellenarMatriz(int[][] matriz) {
-        int desayuno,habitacion, dias;
-        habitacion = ingresarHabitacion();
-        desayuno = ingresarDesayuno();
-        dias = ingresarDias();
-        matriz[habitacion-1][desayuno] = 2;
+    public static int datoDesayuno() {
+        int desayuno = ingresarDesayuno();
+        return desayuno;
+    }
+    public static int datoHabitacion() {
+        int habitacion = ingresarHabitacion();
+        return habitacion;
+    }
+    public static int datoDias() {
+        int dias = ingresarDias();
+        return dias;
+    }
+    public static int[][] rellenarMatriz(int[][] matriz, int desayuno,int habitacion ,int dias) {
+
+        matriz[habitacion-1][0] = 2;
+        matriz[habitacion-1][1] = desayuno;
         matriz[habitacion-1][2] = dias;
         return matriz;
     }
